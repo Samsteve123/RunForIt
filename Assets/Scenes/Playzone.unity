@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 1883816183}
   - component: {fileID: 1883816182}
   - component: {fileID: 1883816184}
+  - component: {fileID: 1883816185}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -329,6 +330,19 @@ MonoBehaviour:
   SpawnTimer: 20
   GenericEnemy: {fileID: 2498848360449867845, guid: d77d18fb2d133c04dbb541916705da78, type: 3}
   Player: {fileID: 0}
+--- !u!114 &1883816185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883816181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d60c0fd4005d44083dc2cfb83b5d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1001 &8858646621955277210
 PrefabInstance:
   m_ObjectHideFlags: 0
