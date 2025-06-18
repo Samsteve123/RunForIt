@@ -8,8 +8,10 @@ public class GameManagerScript : MonoBehaviour
     public int LivingEnemies = 0;
     public float SpawnTimer = 20f;
     private float NextSpawn;
-   
-    private Transform[] SpawnLocations;
+
+
+    [SerializeField] private GameObject[] SpawnPoints = new GameObject[5];
+    private int ChosenSpawnPoint = 1;
     private float HorizontalBound = 50f;
     private float VerticalBound = 50f;
 
@@ -17,6 +19,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject Player;
 
     void Start(){
+
         Player = GameObject.FindGameObjectWithTag("Player");
         NextSpawn = 5f;
     }
@@ -35,6 +38,7 @@ public class GameManagerScript : MonoBehaviour
     }
 
     void SpawnEnemy(){
-        Object.Instantiate(GenericEnemy, new Vector3(HorizontalBound, VerticalBound, 0), Quaternion.identity );
+        ChosenSpawnPoint = Random.Range(0, 4);
+        Object.Instantiate(GenericEnemy, SpawnPoints[ChosenSpawnPoint].transform.position, Quaternion.identity );
     }
 }
