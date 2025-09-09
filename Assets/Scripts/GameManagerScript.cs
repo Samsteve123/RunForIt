@@ -12,8 +12,6 @@ public class GameManagerScript : MonoBehaviour
 
     [SerializeField] private GameObject[] SpawnPoints = new GameObject[5];
     private int ChosenSpawnPoint = 1;
-    private float HorizontalBound = 50f;
-    private float VerticalBound = 50f;
 
     public GameObject GenericEnemy;
     public GameObject Player;

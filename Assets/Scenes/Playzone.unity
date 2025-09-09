@@ -1403,7 +1403,7 @@ MonoBehaviour:
   - {fileID: 661142684}
   - {fileID: 2013659221}
   - {fileID: 52222300}
-  GenericEnemy: {fileID: 2498848360449867845, guid: d77d18fb2d133c04dbb541916705da78, type: 3}
+  GenericEnemy: {fileID: 6255401975515864346, guid: a6b802327e2999d44981316642bab35e, type: 3}
   Player: {fileID: 3171483927600435017}
 --- !u!114 &1883816185
 MonoBehaviour:

@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Player.GetComponent<PlayerStats>().CurrentHealth -= 1;
+        Player.GetComponent<PlayerStats>().TakeDamage(1);
         Debug.Log("OUCH");
     }
 }

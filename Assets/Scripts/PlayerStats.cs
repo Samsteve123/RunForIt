@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class PlayerStats : MonoBehaviour
     public int CurrentHealth = 10;
     public float BaseMoveSpeed = 30f;
     public float BaseDashSpeed = 0f;
+    bool isInvuln = false;
+    private float InvulnDuration = 1f;
 
     public float MoveSpeed { get; set; }
     public float DashSpeed { get; set; }
@@ -19,4 +22,18 @@ public class PlayerStats : MonoBehaviour
         DashSpeed = BaseDashSpeed;
     }
 
+    private IEnumerator TempInvuln()
+    {
+        isInvuln = true;
+        yield return new WaitForSeconds(InvulnDuration);
+        isInvuln = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (isInvuln) return;
+        CurrentHealth -= damage;
+        StartCoroutine(TempInvuln());
+    }
+    
 }

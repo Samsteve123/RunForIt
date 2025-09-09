@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Equipment", menuName = "Scriptable Objects/Equipment")]
 public abstract class Equipment : ScriptableObject
 {
     public string equipmentName;
